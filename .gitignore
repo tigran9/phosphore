@@ -1,0 +1,7 @@
+.idea
+logs/*
+media/*
+collectstatic/*
+*.pyc
+!.gitkeep
+static/*
