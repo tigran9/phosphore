@@ -19,7 +19,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework_swagger.views import get_swagger_view
 
-from apps.contracts.views import TaskAPIView, ContractViewSet, CompareJsonAPIView
+from apps.contracts.views import ContractViewSet, CompareJsonAPIView, JsonSchemeValidationAPIView
 from apps.users import views
 
 schema_view = get_swagger_view(title='Phosphore API')
@@ -32,8 +32,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', schema_view),
     url(r'^', include(router.urls)),
-    url(r'task/', TaskAPIView.as_view()),
     url(r'compare/', CompareJsonAPIView.as_view()),
+    url(r'validate/', JsonSchemeValidationAPIView.as_view()),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 ]
