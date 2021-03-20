@@ -8,7 +8,7 @@ django-rest-swagger==2.1.1
 djangorestframework==3.8.2
 idna==2.7
 itypes==1.1.0
-Jinja2==2.10
+Jinja2==2.11.3
 jsondiff==1.1.2
 jsonfield==2.0.2
 jsonschema==2.6.0
